@@ -1,0 +1,21 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int index=0,i;
+        int []ans = {0,0};
+        ArrayList<Integer> clist = new ArrayList<>();
+        
+        for (int j : nums)
+            clist.add(j);
+        for( i=0;i<nums.length;i++){
+            
+                index =  clist.lastIndexOf(target-nums[i]);
+                
+                if(index>=0&&index!=i){
+                    ans[0]=i;
+                    ans[1]=index;
+                    return ans;
+                }            
+}
+        return ans; 
+    }
+}
