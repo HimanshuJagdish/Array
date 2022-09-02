@@ -1,0 +1,15 @@
+class Solution {
+    enum RuleKey{
+        type,color,name
+    }
+    
+    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int rule = RuleKey.valueOf(ruleKey).ordinal();
+        int ans=0;
+        for(List<String> item: items){
+            if(item.get(rule).equals(ruleValue))
+               ans+=1;        
+        }
+               return ans;
+    }
+}
